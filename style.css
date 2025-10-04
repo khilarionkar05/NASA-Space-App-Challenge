@@ -212,3 +212,173 @@ body {
     gap: 8px;
   }
 }
+
+/* =========================================================================
+   BLOOM WATCH - INTERACTIVE POPUPS & FORMS
+   ========================================================================= */
+
+/* General popup card */
+.leaflet-popup-content {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  padding: 10px;
+  max-width: 320px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Smooth fade when popup opens */
+.leaflet-popup-content {
+  animation: popup-fade 0.4s ease;
+}
+@keyframes popup-fade {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Form inside popup */
+.leaflet-popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* Inputs */
+.leaflet-popup-content input[type="text"],
+.leaflet-popup-content textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  background: #fafafa;
+}
+.leaflet-popup-content input:focus,
+.leaflet-popup-content textarea:focus {
+  border-color: #4CAF50;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+  outline: none;
+}
+
+/* Buttons */
+.action-btn,
+.leaflet-popup-content button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+.action-btn:hover,
+.leaflet-popup-content button:hover {
+  background: linear-gradient(135deg, #45a049, #3e8e41);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+.action-btn:active {
+  transform: scale(0.97);
+}
+
+/* Special Analyze button */
+.analyze-btn {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+}
+.analyze-btn:hover {
+  background: linear-gradient(135deg, #1976D2, #1565C0);
+}
+
+/* Toggle switch (for options inside popup) */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+}
+.toggle-switch input {
+  display: none;
+}
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #ccc;
+  transition: 0.4s;
+  border-radius: 22px;
+}
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.toggle-switch input:checked + .toggle-slider {
+  background: #4CAF50;
+}
+.toggle-switch input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Image thumbnails */
+.popup-thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 4px;
+  border: 1px solid #ddd;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+.popup-thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* NDVI anomaly box */
+.anomaly-box {
+  border: 1px solid #eee;
+  background: #fdfdfd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: highlight 2s infinite alternate;
+}
+@keyframes highlight {
+  from { box-shadow: 0 0 4px rgba(76, 175, 80, 0.3); }
+  to { box-shadow: 0 0 12px rgba(76, 175, 80, 0.6); }
+}
+
+/* Loader animation */
+.loader-small {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4CAF50;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  margin: auto;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
