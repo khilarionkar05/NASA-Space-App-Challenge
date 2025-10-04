@@ -1,4 +1,4 @@
-🌸 Bloom Watch – Tracking and Predicting Flowering Events with NASA Data
+🌸 Bloom Watch – Tracking and Predicting Flowering Events with NASA Data.
 📌 Overview
 
 Bloom Watch is an interactive web platform that leverages NASA Earth Observation Data (Landsat, MODIS, VIIRS) and citizen science to detect, track, and predict large-scale blooming events in India. The project empowers farmers, ecologists, and city planners with actionable insights on flowering cycles, invasive species, and pollen risks.
