@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BloomWatch — Contact</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">💫✨💫  BloomWatch</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="map.html" class="nav-link">Map</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container contact-page">
+    <section>
+      <h1>Contact & Observations</h1>
+      <p>Have you seen blooms in your area? Share an observation or request high-res imagery.</p>
+
+      <form id="contactForm" class="contact-form" onsubmit="return false;">
+        <label>Name<input type="text" id="name" required placeholder="Your name" /></label>
+        <label>Email<input type="email" id="email" required placeholder="you@example.com" /></label>
+        <label>Message<textarea id="message" placeholder="Tell us about what you saw"></textarea></label>
+
+        <h3>Share an observation</h3>
+        <label>Location<input type="text" id="obsLocation" placeholder="City, Region" /></label>
+        <label>Date<input type="date" id="obsDate" /></label>
+        <label>Upload photo<input type="file" id="obsPhoto" accept="image/*" /></label>
+
+        <button class="btn primary" id="submitBtn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>Imagery & data: NASA / USGS / MODIS / Landsat.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

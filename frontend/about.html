@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BloomWatch — About</title>
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">💫✨💫  BloomWatch</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="map.html" class="nav-link">Map</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container about-page">
+    <section>
+      <h1>What is BloomWatch?</h1>
+      <p>BloomWatch uses satellite vegetation indices (NDVI) to indicate when and where vegetation is greening up — a sign of seasonal leafing or mass flowering events.</p>
+    </section>
+
+    <section class="how">
+      <h2>How it works</h2>
+      <ol>
+        <li>Satellites (MODIS, VIIRS, Landsat) measure reflected light to compute NDVI.</li>
+        <li>Data processed in Google Earth Engine to detect sudden NDVI increases (bloom intensity).</li>
+        <li>Results are displayed as map overlays and downloadable images.</li>
+      </ol>
+    </section>
+
+    <section class="gallery">
+      <h2>Imagery Gallery</h2>
+      <div class="grid">
+        <figure>
+          <img src="assets/images/gallery1.jpg" alt="gallery 1" />
+          <figcaption>Landsat 8 — Rajasthan, India — Mar 2024</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/gallery2.jpg" alt="gallery 2" />
+          <figcaption>MODIS Composite — Amazon — Aug 2024</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/gallery3.jpg" alt="gallery 3" />
+          <figcaption>Sentinel-2 — Europe — Apr 2025</figcaption>
+        </figure>
+      </div>
+      <p class="small-note">Replace these placeholders with curated NASA / USGS thumbnails. Each image should include satellite, sensor, date, and location in caption.</p>
+    </section>
+
+    <section class="data-sources">
+      <h2>Data & Credits</h2>
+      <ul>
+        <li>MODIS (MOD13Q1) — 16-day NDVI, 250 m</li>
+        <li>VIIRS — Daily NDVI products</li>
+        <li>Landsat 8 — Higher-resolution imagery</li>
+        <li>Processing: Google Earth Engine</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>Imagery & data: NASA / USGS / MODIS / Landsat.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

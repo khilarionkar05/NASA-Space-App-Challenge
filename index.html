@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Watch - Interactive Map</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+    
+        .leaflet-control-layers-expanded {
+          max-height: 200px;
+          overflow-y: auto;
+          overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Bloom Watch Interactive Map</h1>
+        
+       
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter a city in India...">
+            <button id="searchButton">Search</button>
+             <button id="locationButton">📍 My Location</button>
+             <div class="filter-container">
+                <select id="flowerFilter">
+                    <option value="all">Show All Flowers</option>
+                </select>
+            </div>
+            <div class="timeline-controls">
+  <button id="play-pause-btn">▶️ Play</button>
+  <input type="range" id="timeline-slider" min="0" max="11" value="0">
+  <span id="timeline-label">January</span>
+</div>
+<div class="toggle-container">
+            <input type="checkbox" id="toggle-ndvi" checked>
+            <label for="toggle-ndvi">Animate NASA Layer</label>
+        </div>
+        </div>
+
+        <p>Click a pin to see details, or click a blank space to analyze the location!</p>
+    </div>
+    
+    <div id="map"></div>
+    <div id="loader" class="loader-hidden">Loading NASA Data...</div>
+     
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

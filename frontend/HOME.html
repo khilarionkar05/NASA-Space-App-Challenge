@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BloomWatch — Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"> 💫✨💫 BloomWatch</div>
+    <nav class="nav">
+      <a href="HOME.html" class="nav-link active">Home</a>
+      <a href="http://127.0.0.1:5502/index.html" class="nav-link">Map</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <p1>BloomWatch: The Pulse of Our Planet</p1>
+        <p>Track where plants are blooming in near-real-time using satellite-derived vegetation indices.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="map.html">Explore Map →</a>
+          <a class="btn ghost" href="about.html">Learn more</a>
+        </div>
+      </div>
+
+      <div class="hero-map">
+     
+        <div id="mini-map" class="mini-map"></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <h3>Plant filters</h3>
+        <p>View flowers, crops or forests.</p>
+      </div>
+      <div class="card">
+        <h3>Compare years</h3>
+        <p>See differences: this year vs. last year.</p>
+      </div>
+      <div class="card">
+        <h3>Timelapse</h3>
+        <p>Watch bloom progression over time.</p>
+      </div>
+      <div class="card">
+        <h3>Ed ucational insights</h3>
+        <p>Learn how satellites measure vegetation (NDVI).</p>
+      </div>
+    </section>
+
+    <section class="carousel-wrap">
+      <p1>Featured Satellite Images</p1>
+<div class="carousel">  
+  <a href="sat1.html">
+    <img src="SAT-1.png" alt="satellite 1" />
+  </a>
+  <a href="sat2.html">
+    <img src="SAT-2.png" alt="satellite 2" />
+  </a>
+  <a href="sat3.html">
+    <img src="SAT-3.png" alt="satellite 3" />
+  </a>
+  <a href="sat4.html">
+    <img src="SAT-4.png" alt="satellite 4" />
+  </a>
+  <a href="sat5.html">
+    <img src="SAT-5.png" alt="satellite 5" />
+  </a>
+</div>
+      <p class="small-note">Images: sample placeholders — replace with curated NASA thumbnails (caption & metadata in About page).</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>Imagery & data: NASA / USGS / MODIS / Landsat. Processed with Google Earth Engine.</div>
+    <div><a href="about.html">Data sources & credits</a></div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #eef4fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ========== HEADER ========== */
+.header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  color: #222;
+  padding: 15px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========== SEARCH + CONTROLS ========== */
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-width: 220px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-container input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0,123,255,0.4);
+}
+
+.search-container button {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+
+.search-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+}
+
+/* Filter dropdown */
+.filter-container select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-container select:hover {
+  border-color: #007bff;
+}
+
+/* ========== TIMELINE CONTROLS ========== */
+.timeline-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#play-pause-btn {
+  background: #28a745;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#play-pause-btn:hover {
+  background: #218838;
+}
+
+#timeline-slider {
+  flex: 1;
+  appearance: none;
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  outline: none;
+  cursor: pointer;
+}
+
+#timeline-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#timeline-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+#timeline-label {
+  font-weight: 600;
+  color: #444;
+}
+
+/* ========== TOGGLE NDVI ========== */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.9);
+  padding: 6px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ========== MAP ========== */
+#map {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #ddd;
+}
+
+/* ========== LOADER ========== */
+#loader {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  padding: 10px 16px;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  z-index: 2000;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+
+.loader-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-container input,
+  .search-container button,
+  .filter-container select {
+    width: 100%;
+  }
+  .timeline-controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
